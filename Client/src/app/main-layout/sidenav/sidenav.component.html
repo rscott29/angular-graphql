@@ -1,0 +1,91 @@
+<mat-toolbar class="top-nav" color="primary">
+  <mat-toolbar-row>
+    <h1>Cats</h1>
+    <span class="menu-spacer"></span>
+    <mat-icon (click)="sidenav.toggle()" class="sidenav-menu">menu</mat-icon>
+    <div>
+      <a mat-button [routerLink]="'/cats'"> Cats </a>
+    </div>
+    <span class="spacer"></span>
+    <app-header></app-header>
+    <button class="ml-xs overflow-visible mat-icon-button" mat-icon-button="">
+      <span class="mat-button-wrapper "
+        ><mat-icon
+          class="mat-icon notranslate material-icons mat-icon-no-color"
+          role="img"
+          aria-hidden="true"
+          >settings</mat-icon
+        ></span
+      >
+      <div
+        class="mat-button-ripple mat-ripple mat-button-ripple-round"
+        matripple=""
+      ></div>
+      <div class="mat-button-focus-overlay"></div>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container fullscreen>
+  <mat-sidenav
+    #sidenav
+    mode="side"
+    class="example-sidenav"
+    [ngStyle]="{ 'width.em': sidenavWidth }"
+    opened="true"
+    (mouseenter)="increase()"
+    (mouseleave)="decrease()"
+  >
+    <div class="logomain">Logo Part</div>
+    <mat-nav-list class="nav-list">
+            <h2 matSubheader> Cats </h2>
+      <mat-list-item [matMenuTriggerFor]="menu" routerLink="/cats" routerLinkActive="active">
+        
+        <mat-icon mat-list-icon >person</mat-icon>
+        <div fxFlex="10"></div>
+        
+        <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+              
+          <h5 class="lead">Cats</h5>
+
+        </div>
+        <!-- <button mat-icon-button aria-label="Example icon-button with a menu">
+                <mat-icon>more_vert</mat-icon>
+              </button> -->
+              <mat-menu class="catMenu" #menu="matMenu">
+                <button mat-menu-item>
+                  <mat-icon>dialpad</mat-icon>
+                  <span>Redial</span>
+                </button>
+                <button mat-menu-item disabled>
+                  <mat-icon>voicemail</mat-icon>
+                  <span>Check voice mail</span>
+                </button>
+                <button mat-menu-item>
+                  <mat-icon>notifications_off</mat-icon>
+                  <span>Disable alerts</span>
+                </button>
+              </mat-menu>
+      </mat-list-item>
+      <mat-list-item routerLink="2" routerLinkActive="active">
+        <mat-icon mat-list-icon>settings</mat-icon>
+        <div fxFlex="10"></div>
+        <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+          <h5 class="lead">Services</h5>
+        </div>
+      </mat-list-item>
+
+      <mat-list-item routerLink="3" routerLinkActive="active">
+        <mat-icon mat-list-icon>local_phone</mat-icon>
+        <div fxFlex="10"></div>
+        <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+          <h5 class="lead">Contact</h5>
+        </div>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <div class="sidenav-content">
+    <router-outlet></router-outlet>
+  
+  </div>
+</mat-sidenav-container>

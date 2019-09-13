@@ -1,0 +1,11 @@
+.child-1 {
+  background-color: tomato;
+}
+
+.child-2 {
+  background-color: yellowgreen;
+}
+.parent {
+  height: 200px;
+  background-color: #eee;
+}

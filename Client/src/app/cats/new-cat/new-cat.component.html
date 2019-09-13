@@ -1,0 +1,6 @@
+<form [formGroup]="newCatForm" (ngSubmit)="onSubmit()">
+    <input type="text" formControlName="name">
+    <input type="text" formControlName="breed">
+    <input type="number" formControlName="age">
+    <button>Create Cat</button>
+  </form>

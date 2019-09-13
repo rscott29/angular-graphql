@@ -1,0 +1,66 @@
+.top-nav {
+  position: fixed;
+  z-index: 12;
+}
+.menu-spacer {
+  margin-left: 1em;
+}
+.nav-list {
+  position: relative;
+  top: 30px;
+}
+.sidenav-content {
+  position: relative;
+  top: 65px;
+}
+.spacer {
+  flex: 1 1 auto;
+}
+.catMenu{
+  left: 65px!important;
+  bottom: 38px;
+  position: relative;
+}
+
+@media (max-width: 959px) {
+  mat-toolbar {
+    border-radius: 0px;
+  }
+}
+@-webkit-keyframes pulse {
+  to {
+    box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);
+  }
+}
+@-moz-keyframes pulse {
+  to {
+    box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);
+  }
+}
+@-ms-keyframes pulse {
+  to {
+    box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);
+  }
+}
+@keyframes pulse {
+  to {
+    box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);
+  }
+}
+
+.mat-sidenav {
+  width: 320px;
+}
+
+.toolbar-title {
+  margin: 0 16px 0 16px;
+}
+
+.mat-subheader {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.app-nav-list-icon {
+  margin: 0 12px 0 12px;
+}
