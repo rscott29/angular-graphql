@@ -48,16 +48,20 @@
   }
 }
 
-.mat-sidenav {
-  width: 320px;
-}
+.sidenav {
+  position: absolute;
+  top: 58px;
 
+}
+.row-height {
+  height: 100%
+}
 .toolbar-title {
   margin: 0 16px 0 16px;
 }
 
 .mat-subheader {
-  font-size: 18px;
+  font-size: 13px;
   font-weight: 900;
 }
 

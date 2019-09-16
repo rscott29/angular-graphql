@@ -10,7 +10,7 @@ import {
   MatToolbarModule,
   MatMenuModule
 } from "@angular/material";
-
+import {NgMaterialMultilevelMenuModule} from 'ng-material-multilevel-menu';
 @NgModule({
   declarations: [],
   imports: [
@@ -19,6 +19,7 @@ import {
     MatCardModule,
     MatButtonModule,
     MatSidenavModule,
+    NgMaterialMultilevelMenuModule,
     MatListModule,
     MatIconModule,
     MatToolbarModule,
@@ -29,6 +30,7 @@ import {
     MatCardModule,
     MatButtonModule,
     MatSidenavModule,
+    NgMaterialMultilevelMenuModule,
     MatListModule,
     MatIconModule,
     MatToolbarModule,
